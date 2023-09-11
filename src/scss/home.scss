@@ -1,3 +1,64 @@
 //====================================================================================================
+.main-section {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100%;
+    align-items: center;
+  }
+
+  &__content {
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: toRem(32);
+    }
+  }
+
+  &__text {
+    line-height: 2;
+    &:not(:last-child) {
+      margin-bottom: toRem(40);
+    }
+  }
+
+  &__image {
+    position: relative;
+    padding-bottom: percent(400, 336);
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+.main-section {
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: toRem(5);
+    @include adaptiveValue("column-gap", 32, 15);
+  }
+  &__decor {
+    width: 100%;
+    justify-self: end;
+    max-width: 336px;
+  }
+}
+
+.social {
+  &__link {
+    font-size: toRem(22);
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpurColor;
+      }
+    }
+  }
+}
 
 //====================================================================================================
