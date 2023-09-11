@@ -39,3 +39,19 @@
     }
   }
 }
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: toRem(5);
+  @include adaptiveValue("column-gap", 34, 15);
+  &__link {
+    font-size: toRem(22);
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpurColor;
+      }
+    }
+  }
+}
