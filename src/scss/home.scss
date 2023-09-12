@@ -183,3 +183,157 @@
     line-height: 1.71; /* 171.429% */
   }
 }
+//====================================================================================================
+.page {
+  &__portfolio {
+  }
+}
+.portfolio {
+  &__container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: toRem(30);
+    padding-top: toRem(80);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: toRem(20);
+    @include adaptiveValue("margin-bottom", 144, 30);
+    @media (max-width: em(600)) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__title {
+  }
+
+  &__controls {
+    display: flex;
+    gap: toRem(16);
+    align-items: center;
+    @media (max-width: em(600)) {
+      justify-content: center;
+    }
+  }
+
+  &__arrow {
+    background-color: #eae6fe;
+    color: $purpurColor;
+    padding: toRem(14) toRem(16);
+    border-radius: toRem(16);
+    font-size: toRem(12);
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #b8acf3;
+        color: #6a5ef3;
+      }
+    }
+    &.swiper-button-disabled {
+      opacity: 0.5;
+      cursor: default;
+      background-color: #eae6fe;
+      color: $purpurColor;
+    }
+    &_left {
+    }
+
+    &_right {
+    }
+  }
+}
+.title {
+  &__label {
+  }
+
+  &__value {
+    &_big {
+    }
+  }
+}
+//====================================================================================================
+.portfolio {
+  &__slider {
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+}
+
+.item-portfolio {
+  border: 1px solid #f5f5f5;
+  border-radius: toRem(8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  &__image-ibg {
+    overflow: hidden;
+    padding-bottom: percent(295, 361);
+    opacity: 0.5;
+    transition: opacity 0.8s ease 0s;
+    img {
+      object-position: top;
+      transition: transform 0.8s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 1;
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    @media (any-hover: none) {
+      opacity: 1;
+    }
+  }
+
+  &__body {
+    padding: toRem(24);
+    display: flex;
+    flex-wrap: wrap;
+    gap: toRem(16);
+  }
+
+  &__title {
+    flex: 1 1 100%;
+  }
+
+  &__link-title {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: math.div(20, 16);
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpurColor;
+      }
+    }
+  }
+
+  &__footer {
+  }
+
+  &__category {
+  }
+
+  &__link {
+    font-size: toRem(9.5);
+    display: flex;
+    align-items: center;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpurColor;
+      }
+    }
+  }
+}
