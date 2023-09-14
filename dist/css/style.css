@@ -1015,6 +1015,100 @@ h6 {
   transition: color 0.3s ease 0s;
 }
 
+.testimonials {
+  background-color: #fbfbfb;
+}
+
+.testimonials__container {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1.875rem;
+  padding-top: 5rem;
+}
+
+.testimonials__items {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  row-gap: 5rem;
+}
+
+.item-testimonials {
+  background: white;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+.item-testimonials__avatar-ibg {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 6rem;
+  height: 6rem;
+  margin-top: -3rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.item-testimonials__avatar-ibg:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.item-testimonials__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.item-testimonials__name {
+  font-size: 0.875rem;
+  line-height: 1.2857142857;
+  font-weight: 500;
+}
+
+.item-testimonials__name:not(:last-child) {
+  margin-bottom: 0.5625rem;
+}
+
+.item-testimonials__profession {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.skills__container {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1.875rem;
+  padding-top: 5rem;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -1177,6 +1271,32 @@ h6 {
   .blog__items {
     gap: 2.5rem;
   }
+
+  .testimonials__title {
+    margin-bottom: 8.25rem;
+  }
+
+  .testimonials__items {
+    -webkit-column-gap: 2.5rem;
+       -moz-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+  }
+
+  .item-testimonials {
+    padding-left: 2.375rem;
+  }
+
+  .item-testimonials {
+    padding-right: 2.375rem;
+  }
+
+  .item-testimonials__text:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  .skills__title {
+    margin-bottom: 7rem;
+  }
 }
 
 @media (min-width: 75em) {
@@ -1276,6 +1396,32 @@ h6 {
 
   .blog__items {
     gap: 1.25rem;
+  }
+
+  .testimonials__title {
+    margin-bottom: 4.375rem;
+  }
+
+  .testimonials__items {
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
+  }
+
+  .item-testimonials {
+    padding-left: 0.625rem;
+  }
+
+  .item-testimonials {
+    padding-right: 0.625rem;
+  }
+
+  .item-testimonials__text:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .skills__title {
+    margin-bottom: 1.875rem;
   }
 }
 
@@ -1697,6 +1843,82 @@ h6 {
 @supports not (gap: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem )) {
     .blog__items {
       gap: calc(1.25rem + 1.25 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 4.375rem , 3.0123626374rem  +  6.8131868132vw , 8.25rem )) {
+    .testimonials__title {
+      margin-bottom: clamp( 4.375rem , 3.0123626374rem  +  6.8131868132vw , 8.25rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 4.375rem , 3.0123626374rem  +  6.8131868132vw , 8.25rem )) {
+    .testimonials__title {
+      margin-bottom: calc(4.375rem + 3.875 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports ((-moz-column-gap: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem )) or (column-gap: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem ))) {
+    .testimonials__items {
+      -webkit-column-gap: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem );
+         -moz-column-gap: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem );
+              column-gap: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem );
+    }
+}
+
+@supports not ((-moz-column-gap: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem )) or (column-gap: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem ))) {
+    .testimonials__items {
+      -webkit-column-gap: calc(1.25rem + 1.25 * (100vw - 20rem) / 56.875);
+         -moz-column-gap: calc(1.25rem + 1.25 * (100vw - 20rem) / 56.875);
+              column-gap: calc(1.25rem + 1.25 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding-left: clamp( 0.625rem , 0.0096153846rem  +  3.0769230769vw , 2.375rem )) {
+    .item-testimonials {
+      padding-left: clamp( 0.625rem , 0.0096153846rem  +  3.0769230769vw , 2.375rem );
+    }
+}
+
+@supports not (padding-left: clamp( 0.625rem , 0.0096153846rem  +  3.0769230769vw , 2.375rem )) {
+    .item-testimonials {
+      padding-left: calc(0.625rem + 1.75 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding-right: clamp( 0.625rem , 0.0096153846rem  +  3.0769230769vw , 2.375rem )) {
+    .item-testimonials {
+      padding-right: clamp( 0.625rem , 0.0096153846rem  +  3.0769230769vw , 2.375rem );
+    }
+}
+
+@supports not (padding-right: clamp( 0.625rem , 0.0096153846rem  +  3.0769230769vw , 2.375rem )) {
+    .item-testimonials {
+      padding-right: calc(0.625rem + 1.75 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , 0.6346153846rem  +  3.0769230769vw , 3rem )) {
+    .item-testimonials__text:not(:last-child) {
+      margin-bottom: clamp( 1.25rem , 0.6346153846rem  +  3.0769230769vw , 3rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 0.6346153846rem  +  3.0769230769vw , 3rem )) {
+    .item-testimonials__text:not(:last-child) {
+      margin-bottom: calc(1.25rem + 1.75 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.875rem , 0.0728021978rem  +  9.010989011vw , 7rem )) {
+    .skills__title {
+      margin-bottom: clamp( 1.875rem , 0.0728021978rem  +  9.010989011vw , 7rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.875rem , 0.0728021978rem  +  9.010989011vw , 7rem )) {
+    .skills__title {
+      margin-bottom: calc(1.875rem + 5.125 * (100vw - 20rem) / 56.875);
     }
 }
 }

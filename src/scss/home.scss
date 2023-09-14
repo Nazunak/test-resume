@@ -632,3 +632,109 @@
     }
   }
 }
+// testimonials ====================================================================================================
+
+.testimonials {
+  background-color: #fbfbfb;
+  &__container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: toRem(30);
+    padding-top: toRem(80);
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 132, 70);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(280), 1fr));
+    @include adaptiveValue("column-gap", 40, 20);
+    row-gap: toRem(80);
+  }
+
+  &__item {
+  }
+}
+
+.item-testimonials {
+  background: #ffff;
+  border-radius: toRem(8);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: toRem(24);
+  @include adaptiveValue("padding-left", 38, 10);
+  @include adaptiveValue("padding-right", 38, 10);
+  &__avatar-ibg {
+    border-radius: 50%;
+    overflow: hidden;
+    width: toRem(96);
+    height: toRem(96);
+    margin-top: toRem(-48);
+    align-self: center;
+    &:not(:last-child) {
+      margin-bottom: toRem(32);
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    font-weight: 400;
+    line-height: 1.75;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 48, 20);
+    }
+  }
+
+  &__name {
+    font-size: toRem(14);
+    line-height: math.div(18, 14);
+    font-weight: 500;
+    &:not(:last-child) {
+      margin-bottom: toRem(9);
+    }
+  }
+
+  &__profession {
+    align-self: flex-start;
+  }
+}
+// skills ====================================================================================================
+
+.skills {
+  &__container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: toRem(30);
+    padding-top: toRem(80);
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 112, 30);
+  }
+
+  &__body {
+  }
+
+  &__timeline {
+  }
+}
+
+.timeline {
+  &__item {
+  }
+
+  &__title {
+  }
+
+  &__text {
+  }
+
+  &__date {
+  }
+}
