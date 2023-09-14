@@ -73,3 +73,12 @@
   }
 }
 //====================================================================================================
+.date {
+  background: #fbfbfb;
+  border-radius: toRem(4);
+  padding: toRem(4) toRem(8);
+  display: inline-block;
+  color: $grayColor;
+  font-size: toRem(12);
+  line-height: math.div(15, 12);
+}
