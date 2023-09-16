@@ -721,8 +721,8 @@
   &__body {
     gap: toRem(40);
     display: grid;
-    @media (min-width: $mobile) {
-      grid-template-columns: 1fr 1fr;
+    @media (min-width: em(850)) {
+      grid-template-columns: 1fr percent(658, 1200);
     }
   }
 
@@ -839,6 +839,142 @@
       left: 0;
       background-color: $purpurColor;
       border-radius: toRem(2);
+    }
+  }
+}
+
+// contacts ====================================================================================================
+
+.contacts {
+  background-color: #fbfbfb;
+  &__container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: toRem(30);
+    padding-top: toRem(80);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    @media (max-width: em(850)) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__form {
+    flex: 0 1 50%;
+    @media (max-width: em(850)) {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__body {
+    flex: 0 1 50%;
+    @include adaptiveValue("padding-left", 105, 20);
+    @media (max-width: em(850)) {
+      flex: 0 0 auto;
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  &__list {
+    @media (max-width: em(850)) {
+      margin-bottom: toRem(30);
+    }
+  }
+}
+.form {
+  display: grid;
+  gap: toRem(16);
+  &__item {
+    &:last-child {
+      padding-top: toRem(22);
+    }
+  }
+
+  &__input {
+    background-color: #fff;
+    width: 100%;
+    height: toRem(48);
+    border-radius: toRem(8);
+    padding: toRem(0) toRem(24);
+    &::placeholder {
+      color: $grayColor;
+    }
+    &:focus {
+      &::placeholder {
+        color: $mainColor;
+      }
+    }
+  }
+
+  &__button {
+    background-color: $purpurColor;
+    padding: toRem(16);
+    color: #fff;
+    border-radius: toRem(8);
+    width: 100%;
+    transition: background-color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #9b65b4;
+      }
+    }
+  }
+
+  &__error {
+    padding: toRem(5) toRem(24);
+    color: red;
+    font-size: toRem(12);
+  }
+
+  textarea.form__input {
+    height: toRem(190);
+    resize: vertical;
+    padding: toRem(12) toRem(24);
+  }
+}
+.list-contacts {
+  display: grid;
+  @include adaptiveValue("gap", 48, 20);
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: toRem(24);
+  }
+
+  &__icon {
+    flex: 0 0 toRem(56);
+    border-radius: toRem(16);
+    background-color: #f5f3fe;
+    height: toRem(56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__body {
+  }
+
+  &__title {
+    font-weight: 500;
+    &:not(:last-child) {
+      margin-bottom: toRem(4);
+    }
+  }
+
+  &__text {
+    font-size: toRem(14);
+    line-height: math.div(24, 14);
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpurColor;
+      }
     }
   }
 }
