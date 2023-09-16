@@ -719,8 +719,11 @@
   }
 
   &__body {
+    gap: toRem(40);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    @media (min-width: $mobile) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__timeline {
@@ -809,7 +812,7 @@
 
   &__items {
     display: grid;
-    gap: toRem(40);
+    @include adaptiveValue("gap", 40, 20);
   }
 
   &__item {
@@ -831,6 +834,7 @@
     span {
       position: absolute;
       height: 100%;
+      width: 66%;
       top: 0;
       left: 0;
       background-color: $purpurColor;
